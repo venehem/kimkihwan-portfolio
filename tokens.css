@@ -1,0 +1,246 @@
+/* =========================================================
+   Design Tokens
+   - Layer 1: reference (primitive) tokens   --ref-*
+   - Layer 2: system (semantic) tokens       --sys-*
+   - Layer 3: component tokens live next to each component
+   Naming follows Material Design 3 roles; values tuned for an
+   editorial, dark-first showcase. Runtime overrides (accent, fonts)
+   are injected by js/core/theme.js from content settings.
+   ========================================================= */
+
+:root {
+  /* ---------- Reference: color ---------- */
+  --ref-neutral-0: #000000;
+  --ref-neutral-4: #0b0b0c;
+  --ref-neutral-6: #111113;
+  --ref-neutral-10: #1a1a1d;
+  --ref-neutral-17: #26262a;
+  --ref-neutral-24: #34343a;
+  --ref-neutral-40: #5e5e66;
+  --ref-neutral-60: #93939b;
+  --ref-neutral-80: #c8c8cf;
+  --ref-neutral-90: #e4e4e8;
+  --ref-neutral-95: #f2f2f4;
+  --ref-neutral-98: #f9f9fa;
+  --ref-neutral-100: #ffffff;
+
+  --ref-stone-40: #5d5d58;
+  --ref-stone-50: #6f6f69;
+  --ref-stone-90: #e7e6e1;
+  --ref-taupe-50: #8d8378;
+  --ref-taupe-90: #efe9e2;
+  --ref-ink-20: #1f2530;
+  --ref-ink-25: #272d38;
+
+  --ref-accent: #ffd200;          /* overridden by settings.theme.accent */
+  --ref-accent-on: #1a1a1d;       /* overridden by settings.theme.onAccent */
+  --ref-error: #ff6b5e;
+  --ref-success: #3ecf8e;
+
+  /* ---------- Reference: typography ---------- */
+  --ref-font-sans: "Pretendard Variable", Pretendard, "Helvetica Neue", "Apple SD Gothic Neo",
+    "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ref-font-display: "Helvetica Neue", "Pretendard Variable", Pretendard, Arial, sans-serif;
+  --ref-font-serif: "Minion Pro", "Times New Roman", serif;
+  --ref-font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --ref-weight-light: 300;
+  --ref-weight-regular: 400;
+  --ref-weight-medium: 500;
+  --ref-weight-semibold: 600;
+  --ref-weight-bold: 700;
+
+  /* ---------- System: typography scale (MD3 + fluid display) ---------- */
+  --sys-type-hero: clamp(3.25rem, 1.6rem + 7.2vw, 10rem);
+  --sys-type-mega: clamp(5rem, 2rem + 16vw, 20rem);
+  --sys-type-display-l: clamp(2.75rem, 1.6rem + 4.2vw, 5.5rem);
+  --sys-type-display-m: clamp(2.25rem, 1.5rem + 2.8vw, 4rem);
+  --sys-type-display-s: clamp(1.875rem, 1.4rem + 1.6vw, 2.75rem);
+  --sys-type-headline-l: clamp(1.625rem, 1.3rem + 1.1vw, 2.25rem);
+  --sys-type-headline-m: clamp(1.375rem, 1.2rem + .6vw, 1.75rem);
+  --sys-type-title-l: 1.375rem;
+  --sys-type-title-m: 1rem;
+  --sys-type-body-l: clamp(1rem, .96rem + .2vw, 1.125rem);
+  --sys-type-body-m: .9375rem;
+  --sys-type-body-s: .8125rem;
+  --sys-type-label-l: .875rem;
+  --sys-type-label-m: .75rem;
+  --sys-type-label-s: .6875rem;
+
+  --sys-leading-tight: 1.05;
+  --sys-leading-snug: 1.25;
+  --sys-leading-normal: 1.6;
+  --sys-leading-relaxed: 1.8;
+  --sys-tracking-tight: -.035em;
+  --sys-tracking-normal: 0;
+  --sys-tracking-wide: .08em;
+  --sys-tracking-caps: .18em;
+
+  /* ---------- System: space (4pt grid) ---------- */
+  --sys-space-1: .25rem;
+  --sys-space-2: .5rem;
+  --sys-space-3: .75rem;
+  --sys-space-4: 1rem;
+  --sys-space-5: 1.5rem;
+  --sys-space-6: 2rem;
+  --sys-space-7: 3rem;
+  --sys-space-8: 4rem;
+  --sys-space-9: 6rem;
+  --sys-space-10: 8rem;
+  --sys-space-section: clamp(5rem, 3rem + 8vw, 11rem);
+
+  /* ---------- System: layout ---------- */
+  --sys-container: 1440px;
+  --sys-container-narrow: 880px;
+  --sys-gutter: clamp(1rem, .4rem + 2.6vw, 3.5rem);
+  --sys-header-h: 64px;
+  --sys-touch-target: 48px;       /* MD3 48dp / HIG 44pt */
+
+  /* ---------- System: shape ---------- */
+  --sys-shape-xs: 4px;
+  --sys-shape-s: 8px;
+  --sys-shape-m: 12px;
+  --sys-shape-l: 16px;
+  --sys-shape-xl: 28px;
+  --sys-shape-full: 999px;
+
+  /* ---------- System: elevation ---------- */
+  --sys-elev-1: 0 1px 2px rgb(0 0 0 / .3), 0 1px 3px 1px rgb(0 0 0 / .15);
+  --sys-elev-2: 0 1px 2px rgb(0 0 0 / .3), 0 2px 6px 2px rgb(0 0 0 / .15);
+  --sys-elev-3: 0 4px 8px 3px rgb(0 0 0 / .15), 0 1px 3px rgb(0 0 0 / .3);
+  --sys-elev-5: 0 8px 12px 6px rgb(0 0 0 / .15), 0 4px 4px rgb(0 0 0 / .3);
+
+  /* ---------- System: motion (MD3 easing & duration) ---------- */
+  --sys-ease-standard: cubic-bezier(.2, 0, 0, 1);
+  --sys-ease-emphasized: cubic-bezier(.2, 0, 0, 1);
+  --sys-ease-decelerate: cubic-bezier(.05, .7, .1, 1);
+  --sys-ease-accelerate: cubic-bezier(.3, 0, .8, .15);
+  --sys-ease-expo: cubic-bezier(.16, 1, .3, 1);
+  --sys-dur-short: 150ms;
+  --sys-dur-medium: 300ms;
+  --sys-dur-long: 600ms;
+  --sys-dur-xlong: 1000ms;
+  --sys-stagger: 70ms;
+  --sys-reveal-distance: 40px;
+
+  /* ---------- System: state layers (MD3) ---------- */
+  --sys-state-hover: .08;
+  --sys-state-focus: .12;
+  --sys-state-pressed: .12;
+
+  /* ---------- System: z-index ---------- */
+  --sys-z-base: 1;
+  --sys-z-sticky: 10;
+  --sys-z-header: 100;
+  --sys-z-overlay: 500;
+  --sys-z-admin: 900;
+  --sys-z-dialog: 1000;
+  --sys-z-snackbar: 1100;
+
+  /* ---------- Scroll-driven parameters ---------- */
+  --sys-pin-hero-inset: 6%;
+  --sys-chapter-window-y: 26%;
+  --sys-chapter-window-x: 32%;
+  --sys-parallax-range: 12%;
+}
+
+/* =========================================================
+   Themes (semantic color roles). Applied with [data-theme].
+   Add a new surface by adding a block here and registering its
+   name in js/core/config.js → themes.
+   ========================================================= */
+:root,
+[data-theme="dark"] {
+  --sys-color-surface: var(--ref-neutral-4);
+  --sys-color-surface-container: var(--ref-neutral-10);
+  --sys-color-surface-container-high: var(--ref-neutral-17);
+  --sys-color-on-surface: var(--ref-neutral-95);
+  --sys-color-on-surface-variant: var(--ref-neutral-60);
+  --sys-color-outline: var(--ref-neutral-40);
+  --sys-color-outline-variant: var(--ref-neutral-24);
+  --sys-color-primary: var(--ref-accent);
+  --sys-color-on-primary: var(--ref-accent-on);
+  --sys-color-scrim: rgb(0 0 0 / .55);
+  color-scheme: dark;
+}
+
+[data-theme="black"] {
+  --sys-color-surface: var(--ref-neutral-0);
+  --sys-color-surface-container: var(--ref-neutral-6);
+  --sys-color-surface-container-high: var(--ref-neutral-17);
+  --sys-color-on-surface: var(--ref-neutral-100);
+  --sys-color-on-surface-variant: var(--ref-neutral-60);
+  --sys-color-outline: var(--ref-neutral-40);
+  --sys-color-outline-variant: var(--ref-neutral-17);
+  --sys-color-primary: var(--ref-accent);
+  --sys-color-on-primary: var(--ref-accent-on);
+  --sys-color-scrim: rgb(0 0 0 / .6);
+  color-scheme: dark;
+}
+
+[data-theme="ink"] {
+  --sys-color-surface: var(--ref-ink-20);
+  --sys-color-surface-container: var(--ref-ink-25);
+  --sys-color-surface-container-high: var(--ref-neutral-24);
+  --sys-color-on-surface: var(--ref-neutral-95);
+  --sys-color-on-surface-variant: var(--ref-neutral-60);
+  --sys-color-outline: var(--ref-neutral-40);
+  --sys-color-outline-variant: var(--ref-neutral-24);
+  --sys-color-primary: var(--ref-accent);
+  --sys-color-on-primary: var(--ref-accent-on);
+  --sys-color-scrim: rgb(0 0 0 / .5);
+  color-scheme: dark;
+}
+
+[data-theme="stone"] {
+  --sys-color-surface: var(--ref-stone-50);
+  --sys-color-surface-container: var(--ref-stone-40);
+  --sys-color-surface-container-high: var(--ref-neutral-40);
+  --sys-color-on-surface: var(--ref-neutral-98);
+  --sys-color-on-surface-variant: var(--ref-neutral-90);
+  --sys-color-outline: var(--ref-neutral-80);
+  --sys-color-outline-variant: var(--ref-neutral-60);
+  --sys-color-primary: var(--ref-accent);
+  --sys-color-on-primary: var(--ref-accent-on);
+  --sys-color-scrim: rgb(0 0 0 / .4);
+  color-scheme: dark;
+}
+
+[data-theme="taupe"] {
+  --sys-color-surface: var(--ref-taupe-50);
+  --sys-color-surface-container: var(--ref-stone-40);
+  --sys-color-surface-container-high: var(--ref-neutral-40);
+  --sys-color-on-surface: var(--ref-neutral-100);
+  --sys-color-on-surface-variant: var(--ref-taupe-90);
+  --sys-color-outline: var(--ref-taupe-90);
+  --sys-color-outline-variant: var(--ref-neutral-80);
+  --sys-color-primary: var(--ref-accent);
+  --sys-color-on-primary: var(--ref-accent-on);
+  --sys-color-scrim: rgb(0 0 0 / .35);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --sys-color-surface: var(--ref-neutral-98);
+  --sys-color-surface-container: var(--ref-neutral-95);
+  --sys-color-surface-container-high: var(--ref-neutral-90);
+  --sys-color-on-surface: var(--ref-neutral-10);
+  --sys-color-on-surface-variant: var(--ref-neutral-40);
+  --sys-color-outline: var(--ref-neutral-60);
+  --sys-color-outline-variant: var(--ref-neutral-90);
+  --sys-color-primary: var(--ref-neutral-10);
+  --sys-color-on-primary: var(--ref-neutral-100);
+  --sys-color-scrim: rgb(255 255 255 / .6);
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --sys-dur-short: 1ms;
+    --sys-dur-medium: 1ms;
+    --sys-dur-long: 1ms;
+    --sys-dur-xlong: 1ms;
+    --sys-stagger: 0ms;
+    --sys-reveal-distance: 0px;
+  }
+}
